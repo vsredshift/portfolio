@@ -1,7 +1,7 @@
 .menu-btn {
   position: absolute;
-  right: 35px;
-  top: 35px;
+  right: 30px;
+  top: 30px;
   cursor: pointer;
   z-index: 3;
   transition: all 0.5s ease-out;
@@ -149,7 +149,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 700;
 }
 h1.lg-heading,
 h2.lg-heading,
@@ -226,7 +226,7 @@ main#home h1 {
 }
 .about-info .job {
   background: #444a54;
-  padding: 0.5rem;
+  padding: 1rem;
   border-bottom: solid 5px #00adb5;
 }
 .about-info .job-1 {
@@ -239,6 +239,45 @@ main#home h1 {
   grid-area: job3;
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.projects img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px #f3f4ed solid;
+}
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #00adb5;
+  transition: all 0.5s ease-out;
+}
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover, .btn-light:hover, .btn-dark:hover {
+  background: #00adb5;
+  color: #f3f4ed;
+}
+
+.btn-dark {
+  background: black;
+  color: #f3f4ed;
+}
+
+.btn-light {
+  background: #b8bdc6;
+  color: #111;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -247,6 +286,16 @@ main#home h1 {
   height: 60px;
 }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -291,10 +340,18 @@ div.menu-branding.show {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
     font-size: 2.5rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
