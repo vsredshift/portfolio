@@ -1,3 +1,18 @@
+/*-------------------------------------------------------
+            Colours & Background
+--------------------------------------------------------*/
+/*-------------------------------------------------------
+            Mixins
+--------------------------------------------------------*/
+/*-------------------------------------------------------
+            Functions
+--------------------------------------------------------*/
+/*-------------------------------------------------------
+            Media Queries
+--------------------------------------------------------*/
+/*-------------------------------------------------------
+            Menu Button
+--------------------------------------------------------*/
 .menu-btn {
   position: absolute;
   right: 30px;
@@ -26,6 +41,9 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/*-------------------------------------------------------
+            Menu Overlay
+--------------------------------------------------------*/
 .menu {
   position: fixed;
   top: 0;
@@ -35,7 +53,7 @@
 .menu.show {
   visibility: visible;
 }
-.menu-branding, .menu-nav {
+.menu-pic, .menu-nav {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -48,30 +66,30 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #2e3238;
+  background: #363936;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
-  opacity: 0.8;
+  opacity: 0.88;
 }
 .menu-nav.show {
   transform: translate3d(0, 0, 0);
 }
-.menu-branding {
-  background: #393e46;
+.menu-pic {
+  background: #424642;
   transition: all 0.5s ease-out;
   transform: translate3d(0, 100%, 0);
   opacity: 0.9;
 }
-.menu-branding.show {
+.menu-pic.show {
   transform: translate3d(0, 0, 0);
 }
-.menu-branding .portrait {
+.menu-pic .profile-pic {
   width: 250px;
   height: 250px;
   background: url("https://vsredshift.github.io/home/images/profile.jpeg") center/cover;
   border-radius: 50%;
-  border: solid 3px #00adb5;
+  border: solid 3px #c06014;
 }
 .menu .nav-item {
   transform: translate3d(600px, 0, 0);
@@ -81,7 +99,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu .nav-item.current > a {
-  color: #00adb5;
+  color: #c06014;
 }
 .menu .nav-link {
   display: inline-block;
@@ -95,7 +113,7 @@
   transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
-  color: #00adb5;
+  color: #c06014;
 }
 
 .nav-item:nth-child(1) {
@@ -119,7 +137,7 @@
 }
 
 body {
-  background: #393e46;
+  background: #424642;
   color: #f3f4ed;
   height: 100%;
   margin: 0;
@@ -139,7 +157,7 @@ body#bg-img::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(57, 62, 70, 0.8);
+  background: rgba(66, 70, 66, 0.88);
 }
 
 /*-----------------------------------------------------
@@ -161,7 +179,7 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(62, 67, 76, 0.5);
+  background: rgba(71, 75, 71, 0.5);
 }
 
 /*-----------------------------------------------------
@@ -182,9 +200,12 @@ header {
 }
 
 .text-secondary {
-  color: #00adb5;
+  color: #c06014;
 }
 
+/*-------------------------------------------------------
+            Main
+--------------------------------------------------------*/
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
@@ -196,7 +217,7 @@ main .icons a {
   padding: 0.4rem;
 }
 main .icons a:hover {
-  color: #00adb5;
+  color: #c06014;
   transition: all 0.5s ease-out;
 }
 main#home {
@@ -206,6 +227,9 @@ main#home h1 {
   margin-top: 20vh;
 }
 
+/*-------------------------------------------------------
+            About Page
+--------------------------------------------------------*/
 .about-info {
   display: grid;
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
@@ -216,7 +240,7 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: solid 3px #00adb5;
+  border: solid 3px #c06014;
   width: 250px;
   height: 250px;
 }
@@ -225,9 +249,9 @@ main#home h1 {
   font-size: 1.5rem;
 }
 .about-info .job {
-  background: #444a54;
+  background: #4e534e;
   padding: 1rem;
-  border-bottom: solid 5px #00adb5;
+  border-bottom: solid 5px #c06014;
 }
 .about-info .job-1 {
   grid-area: job1;
@@ -239,10 +263,29 @@ main#home h1 {
   grid-area: job3;
 }
 
+/*-------------------------------------------------------
+            Projects Page
+--------------------------------------------------------*/
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+.projects .item {
+  position: relative;
+}
+.projects .project-title {
+  position: absolute;
+  background: #c2c5c2;
+  color: #111;
+  left: 3px;
+  top: 5%;
+  visibility: hidden;
+  font-weight: 500;
+  padding: 5px;
+}
+.projects .project-title:hover {
+  visibility: visible;
 }
 .projects img {
   width: 100%;
@@ -253,10 +296,42 @@ main#home h1 {
 }
 .projects img:hover {
   opacity: 0.5;
-  border-color: #00adb5;
+  border-color: #c06014;
   transition: all 0.5s ease-out;
 }
+.projects img:hover + div {
+  visibility: visible;
+}
 
+/*-------------------------------------------------------
+            Contact Page
+--------------------------------------------------------*/
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 3px solid #f3f4ed;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #c06014;
+  color: #000;
+}
+.boxes div:hover span {
+  color: #000;
+}
+
+/*-------------------------------------------------------
+            Utilities
+--------------------------------------------------------*/
 .btn, .btn-light, .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
@@ -264,8 +339,8 @@ main#home h1 {
   margin-bottom: 0.3rem;
 }
 .btn:hover, .btn-light:hover, .btn-dark:hover {
-  background: #00adb5;
-  color: #f3f4ed;
+  background: #c06014;
+  color: #000;
 }
 
 .btn-dark {
@@ -274,18 +349,24 @@ main#home h1 {
 }
 
 .btn-light {
-  background: #b8bdc6;
+  background: #c2c5c2;
   color: #111;
 }
 
+/*-------------------------------------------------------
+            Footer
+--------------------------------------------------------*/
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #22252a;
+  background: #292c29;
   color: #f3f4ed;
   height: 60px;
 }
 
+/*-------------------------------------------------------
+            Responsiveness
+--------------------------------------------------------*/
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(3, 1fr);
@@ -310,13 +391,13 @@ main#home h1 {
   }
 
   ul.menu-nav,
-div.menu-branding {
+div.menu-pic {
     float: none;
     width: 100%;
     min-height: 0;
   }
   ul.menu-nav.show,
-div.menu-branding.show {
+div.menu-pic.show {
     transform: translate3d(0, 0, 0);
   }
 
@@ -327,11 +408,11 @@ div.menu-branding.show {
     opacity: 0.96;
   }
 
-  .menu-branding {
+  .menu-pic {
     height: 25vh;
     transform: translate3d(100%, 0, 0);
   }
-  .menu-branding .portrait {
+  .menu-pic .profile-pic {
     width: 150px;
     height: 150px;
   }

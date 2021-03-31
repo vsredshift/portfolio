@@ -1,4 +1,7 @@
-// Menu Button
+/*-------------------------------------------------------
+            Menu Button
+--------------------------------------------------------*/
+
 .menu-btn {
     position: absolute;
     right: 30px;
@@ -36,7 +39,10 @@
     }
 }
 
-// Menu Overlay
+/*-------------------------------------------------------
+            Menu Overlay
+--------------------------------------------------------*/
+
 .menu {
     position: fixed;
     top: 0;
@@ -47,7 +53,7 @@
         visibility: visible;
     }
 
-    &-branding,
+    &-pic,
     &-nav {
         display: flex;
         flex-flow: column wrap;
@@ -74,8 +80,8 @@
         }
     }
 
-    // Branding Side
-    &-branding {
+    // Picture Side
+    &-pic {
         background: $primary-color;
         @include easeOut;
         transform: translate3d(0, 100%, 0);
@@ -85,7 +91,7 @@
             transform: translate3d(0, 0, 0);
         }
 
-        .portrait {
+        .profile-pic {
             width: 250px;
             height: 250px;
             background: url("https://vsredshift.github.io/home/images/profile.jpeg")

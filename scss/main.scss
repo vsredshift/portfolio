@@ -59,6 +59,10 @@ header {
     color: $secondary-color;
 }
 
+/*-------------------------------------------------------
+            Main
+--------------------------------------------------------*/
+
 main {
     padding: 4rem;
     // height: 100%;
@@ -85,7 +89,10 @@ main {
     }
 }
 
-// About Page
+/*-------------------------------------------------------
+            About Page
+--------------------------------------------------------*/
+
 .about-info {
     display: grid;
     grid-template-areas:
@@ -127,11 +134,32 @@ main {
     }
 }
 
-// Projects
+/*-------------------------------------------------------
+            Projects Page
+--------------------------------------------------------*/
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+
+    .item {
+        position: relative;
+    }
+    .project-title {
+        position: absolute;
+        background: lighten($primary-color, 50);
+        color: #111;
+        left: 3px;
+        top: 5%;
+        visibility: hidden;
+        font-weight: 500;
+        padding: 5px;
+
+        &:hover {
+            visibility: visible;
+        }
+    }
 
     img {
         width: 100%;
@@ -144,8 +172,44 @@ main {
             border-color: $secondary-color;
             @include easeOut;
         }
+        &:hover + div {
+            visibility: visible;
+        }
     }
 }
+
+/*-------------------------------------------------------
+            Contact Page
+--------------------------------------------------------*/
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 3px solid $text-color;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+}
+
+/*-------------------------------------------------------
+            Utilities
+--------------------------------------------------------*/
 
 // Button
 .btn {
@@ -172,6 +236,11 @@ main {
     color: #111;
 }
 
+
+/*-------------------------------------------------------
+            Footer
+--------------------------------------------------------*/
+
 #main-footer {
     text-align: center;
     padding: 1rem;
@@ -180,4 +249,6 @@ main {
     height: 60px;
 }
 
+
+// Import responsive stylings
 @import "mobile";

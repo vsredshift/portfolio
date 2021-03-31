@@ -1,12 +1,24 @@
-// $primary-color: #424642;
-// $secondary-color: #c06014;
-$primary-color: #393e46;
-$secondary-color: #00adb5;
+/*-------------------------------------------------------
+            Colours & Background
+--------------------------------------------------------*/
+
+$primary-color: #424642;
+$secondary-color: #c06014;
+// $primary-color: #393e46;
+// $secondary-color: #b67162;
+// $primary-color: #364547;
+// $secondary-color: #ffe268;
 $text-color: #f3f4ed;
+
 $show-home-image: true;
 // $home-image: url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 $home-image: url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-$background-opacity: 0.8;
+
+$background-opacity: 0.88;
+
+/*-------------------------------------------------------
+            Mixins
+--------------------------------------------------------*/
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
@@ -33,7 +45,11 @@ $background-opacity: 0.8;
     }
 }
 
-// Text Color
+/*-------------------------------------------------------
+            Functions
+--------------------------------------------------------*/
+
+// Set text colour to contrast with background colour
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
         @return #000;
@@ -41,6 +57,10 @@ $background-opacity: 0.8;
         @return $text-color;
     }
 }
+
+/*-------------------------------------------------------
+            Media Queries
+--------------------------------------------------------*/
 
 // Media Query Mixins
 @mixin mediaSm {
