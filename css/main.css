@@ -70,7 +70,7 @@
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
-  opacity: 0.88;
+  opacity: 0.9;
 }
 .menu-nav.show {
   transform: translate3d(0, 0, 0);
@@ -89,7 +89,7 @@
   height: 250px;
   background: url("https://vsredshift.github.io/home/images/profile.jpeg") center/cover;
   border-radius: 50%;
-  border: solid 3px #c06014;
+  border: solid 3px chartreuse;
 }
 .menu .nav-item {
   transform: translate3d(600px, 0, 0);
@@ -99,7 +99,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu .nav-item.current > a {
-  color: #c06014;
+  color: chartreuse;
 }
 .menu .nav-link {
   display: inline-block;
@@ -113,7 +113,7 @@
   transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
-  color: #c06014;
+  color: chartreuse;
 }
 
 .nav-item:nth-child(1) {
@@ -157,7 +157,7 @@ body#bg-img::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(66, 70, 66, 0.88);
+  background: rgba(66, 70, 66, 0.9);
 }
 
 /*-----------------------------------------------------
@@ -200,7 +200,7 @@ header {
 }
 
 .text-secondary {
-  color: #c06014;
+  color: chartreuse;
 }
 
 /*-------------------------------------------------------
@@ -217,7 +217,7 @@ main .icons a {
   padding: 0.4rem;
 }
 main .icons a:hover {
-  color: #c06014;
+  color: chartreuse;
   transition: all 0.5s ease-out;
 }
 main#home {
@@ -240,7 +240,7 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: solid 3px #c06014;
+  border: solid 3px chartreuse;
   width: 250px;
   height: 250px;
 }
@@ -251,7 +251,7 @@ main#home h1 {
 .about-info .job {
   background: #4e534e;
   padding: 1rem;
-  border-bottom: solid 5px #c06014;
+  border-bottom: solid 5px chartreuse;
 }
 .about-info .job-1 {
   grid-area: job1;
@@ -296,7 +296,7 @@ main#home h1 {
 }
 .projects img:hover {
   opacity: 0.5;
-  border-color: #c06014;
+  border-color: chartreuse;
   transition: all 0.5s ease-out;
 }
 .projects img:hover + div {
@@ -322,7 +322,7 @@ main#home h1 {
 }
 .boxes div:hover {
   padding: 0.5rem 1.5rem;
-  background: #c06014;
+  background: chartreuse;
   color: #000;
 }
 .boxes div:hover span {
@@ -339,7 +339,7 @@ main#home h1 {
   margin-bottom: 0.3rem;
 }
 .btn:hover, .btn-light:hover, .btn-dark:hover {
-  background: #c06014;
+  background: chartreuse;
   color: #000;
 }
 
@@ -432,7 +432,32 @@ div.menu-pic.show {
     font-size: 2.5rem;
   }
 
+  .text-secondary {
+    position: relative;
+    right: 1rem;
+  }
+
+  main#about h1,
+main#work h1,
+main#contact h1 {
+    margin-top: 8vh;
+    font-size: 4rem;
+  }
+
+  .about-info .bio-image {
+    height: 150px;
+    width: 150px;
+  }
+
+  .bio p {
+    font-size: 1rem;
+  }
+
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .boxes div {
+    font-size: 1.5rem;
   }
 }

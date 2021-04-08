@@ -3,7 +3,9 @@
 --------------------------------------------------------*/
 
 $primary-color: #424642;
-$secondary-color: #c06014;
+// $secondary-color: #c06014;
+$secondary-color: chartreuse;
+
 // $primary-color: #393e46;
 // $secondary-color: #b67162;
 // $primary-color: #364547;
@@ -14,7 +16,7 @@ $show-home-image: true;
 // $home-image: url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 $home-image: url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 
-$background-opacity: 0.88;
+$background-opacity: 0.9;
 
 /*-------------------------------------------------------
             Mixins
