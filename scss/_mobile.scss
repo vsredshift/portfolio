@@ -72,6 +72,10 @@
 
     .projects {
         grid-template-columns: repeat(2, 1fr);
+
+        .project-title {
+            visibility: visible;
+        }
     }
 }
 
@@ -103,9 +107,21 @@
 
     .projects {
         grid-template-columns: 1fr;
+
+        img {
+            height: 180px;
+        }
     }
 
     .boxes div {
         font-size: 1.5rem;
+    }
+
+    #main-footer {
+        font-size: smaller;
+
+        span.text-secondary {
+            right: 0;
+        }
     }
 }

@@ -344,7 +344,9 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+    .projects .project-title {
+      visibility: visible; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -365,5 +367,11 @@ main {
     font-size: 1rem; }
   .projects {
     grid-template-columns: 1fr; }
+    .projects img {
+      height: 180px; }
   .boxes div {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  #main-footer {
+    font-size: smaller; }
+    #main-footer span.text-secondary {
+      right: 0; } }
