@@ -34,10 +34,17 @@ function toggleMenu() {
 
 // Change project thumbnails on hover
 const frontendImage = document.getElementById("frontend").getElementsByTagName("img")[0];
-const images = ["../images/gepetto.png", "../images/gmusic.png", "../images/getaway.png", "../images/business.png", "../images/glabws.png"];
+const images = ["https://live.staticflickr.com/65535/51147262820_54a21e6e00_m.jpg", 
+                "https://live.staticflickr.com/65535/51147263155_c05c06324b_m.jpg", 
+                "https://live.staticflickr.com/65535/51146154491_00127e89a4_m.jpg", 
+                "https://live.staticflickr.com/65535/51146154486_3c3681be33_m.jpg", 
+                "https://live.staticflickr.com/65535/51146937219_e55b236ddc_m.jpg",
+                "https://live.staticflickr.com/65535/51147262920_59c2a35f3b_m.jpg"];
 
 const coronaImage = document.getElementById("corona").getElementsByTagName("img")[0];
-const coronaPics = ["../images/coronaRolling.png", "../images/coronaTable.png", "../images/coronaComp.png"];
+const coronaPics = ["https://live.staticflickr.com/65535/51147262860_0a6f5be1e0_m.jpg", 
+                    "https://live.staticflickr.com/65535/51146154371_c790583c05_m.jpg", 
+                    "https://live.staticflickr.com/65535/51146154386_4b778fcf5c_m.jpg"];
 
 
 var timer;
