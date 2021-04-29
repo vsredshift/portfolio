@@ -70,7 +70,7 @@
         grid-template-columns: 1fr;
     }
 
-    .projects {
+    .projects, .websites {
         grid-template-columns: repeat(2, 1fr);
 
         .project-title {
@@ -92,7 +92,8 @@
 
     main#about h1,
     main#work h1,
-    main#contact h1 {
+    main#contact h1,
+    main#sites h1 {
         margin-top: 8vh;
         font-size: 4rem;
     }
@@ -105,7 +106,7 @@
         font-size: 1rem;
     }
 
-    .projects {
+    .projects, .websites {
         grid-template-columns: 1fr;
 
         img {

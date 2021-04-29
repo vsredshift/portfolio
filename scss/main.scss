@@ -208,6 +208,51 @@ main {
 }
 
 /*-------------------------------------------------------
+            Websites Page
+--------------------------------------------------------*/
+.websites {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    .item {
+        position: relative;
+    }
+
+
+    .project-title {
+        position: absolute;
+        background: lighten($primary-color, 50);
+        color: #111;
+        left: 3px;
+        top: 5%;
+        visibility: hidden;
+        font-weight: 500;
+        padding: 5px;
+
+        &:hover {
+            visibility: visible;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border: 3px $text-color solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+        &:hover + div {
+            visibility: visible;
+        }
+    }
+}
+
+/*-------------------------------------------------------
             Utilities
 --------------------------------------------------------*/
 
