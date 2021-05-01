@@ -33,6 +33,7 @@ function toggleMenu() {
 }
 
 // Change project thumbnails on hover
+
 const frontendImage = document.getElementById("frontend").getElementsByTagName("img")[0];
 const images = ["https://live.staticflickr.com/65535/51147262820_54a21e6e00_m.jpg", 
                 "https://live.staticflickr.com/65535/51147263155_c05c06324b_m.jpg", 
@@ -85,4 +86,3 @@ coronaImage.onmouseout = () => {
     coronaImage.src = "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
     clearTimeout(timer);
 };
-
