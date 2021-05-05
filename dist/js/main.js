@@ -43,9 +43,9 @@ const images = ["https://live.staticflickr.com/65535/51147262820_54a21e6e00_m.jp
                 "https://live.staticflickr.com/65535/51147262920_59c2a35f3b_m.jpg"];
 
 const coronaImage = document.getElementById("corona").getElementsByTagName("img")[0];
-const coronaPics = ["https://live.staticflickr.com/65535/51147262860_0a6f5be1e0_m.jpg", 
-                    "https://live.staticflickr.com/65535/51146154371_c790583c05_m.jpg", 
-                    "https://live.staticflickr.com/65535/51146154386_4b778fcf5c_m.jpg"];
+const coronaPics = ["https://live.staticflickr.com/65535/51147025059_f8d1e4a26c_z.jpg",
+                    "https://live.staticflickr.com/65535/51146465833_46ba20682b_c.jpg", 
+                    "https://live.staticflickr.com/65535/51146465948_20d0d7cdb2_z.jpg"];
 
 
 var timer;
